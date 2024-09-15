@@ -16,7 +16,7 @@ export default function SignUp() {
     async function submit(e) {
         e.preventDefault();
         try {
-            const response = await axios.post("http://51.20.55.249:8000/signup", {
+            const response = await axios.post("https://51.20.55.249:8000/signup", {
                 name,
                 email,
                 password

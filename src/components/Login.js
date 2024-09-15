@@ -19,7 +19,7 @@ export default function Login() {
     e.preventDefault(); 
     setLoading(true);
     try {
-      const response = await axios.post("http://51.20.55.249:8000/login", {
+      const response = await axios.post("https://51.20.55.249:8000/login", {
         email,
         password,
       });
