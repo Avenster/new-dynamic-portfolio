@@ -1,0 +1,299 @@
+.gen-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+    gap: 1vw;
+}
+
+#response-component{
+    width: 100%;
+    height: 80vh;
+}
+
+.generate{
+    display: flex;
+    height: 80vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.promt1{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    flex-direction: column;
+    /* background-color: beige; */
+    border-radius:1rem;
+    background-color: rgb(17, 17, 17);
+    font-family: 'Space Mono';
+    gap: 2vh;
+
+}
+.responce-image{
+    background-color:#000000 ;
+    height: 55%;
+    width: 80%;
+    position: relative;
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    margin-top: 4vh;
+
+}
+.responce-image::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, rgba(0, 225, 255, 0.476), rgba(174, 0, 255, 0.525));
+    z-index: -1;
+    border-radius: 12px; 
+    overflow: hidden;
+  }
+.generated{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(21, 21, 21);
+    border-radius:0.6rem;
+}
+
+.gen-txt{
+    font-family: "Space Mono", monospace;
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.design-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 70%;
+    flex-direction: column;
+    align-items: center;
+
+}
+.design-container img{
+    border-radius: 1rem;
+    height: 45%;
+    width:auto;
+}
+.generate-custom-btn{
+    border: none;
+    width: 17vw;
+    height: 4vh;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    color: black;
+    overflow: hidden;
+    z-index:2;
+    clip-path: polygon(0 0, 90% 0, 100% 45%, 100% 100%, 0% 100%);
+    font-family: 'Source Code Pro', monospace;
+
+}
+.generate-custom-btn::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0) !important;
+    left:-100%;
+    top:0;
+    position: absolute;
+    z-index: -100; 
+    /* clip-path: polygon(0 0, 90% 0, 100% 45%, 100% 100%, 0% 100%); */
+    transition: left 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),border 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+}
+.generate-custom-btn:hover::before{
+    left:0;
+    /* border: 1px solid rgba(255, 255, 255, 0.31) !important; */
+}
+
+.generate-custom-btn:hover{clip-path:none;
+    /* clip-path: polygon(0 0, 90% 0, 100% 45%, 100% 100%, 0% 100%); */
+    color: rgba(255, 255, 255, 0.729) !important;
+    
+}
+.generate-btn{
+    border: none;
+    width: 17vw;
+    height: 4vh;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    color: black;
+    overflow: hidden;
+    z-index:2;
+    clip-path: polygon(0 0, 90% 0, 100% 45%, 100% 100%, 0% 100%);
+    font-family: 'Source Code Pro', monospace;
+    /* transition: clip-path 2s ease-in-out; */
+}
+.generate-btn::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0) !important;
+    left:-100%;
+    top:0;
+    position: absolute;
+    z-index: -100; 
+    /* clip-path: polygon(0 0, 90% 0, 100% 45%, 100% 100%, 0% 100%); */
+    transition: left 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),border 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+}
+
+.generate-btn:hover::before{
+    left:0;
+    /* border: 1px solid rgba(255, 255, 255, 0.31) !important; */
+}
+
+.generate-btn:hover{clip-path:none;
+    /* clip-path: polygon(0 0, 90% 0, 100% 45%, 100% 100%, 0% 100%); */
+    color: rgba(255, 255, 255, 0.729) !important;
+    
+}
+/* Existing styles... */
+
+.loading-animation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+    width: 100%;
+  }
+  
+  .loading-placeholder {
+    background-color: #323232;
+    height: 200px;
+    width: calc(50% - 10px); 
+    border-radius: 8px;
+
+    animation: loading-flash 1.5s infinite;
+  }
+  
+  @keyframes loading-flash {
+    0% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.6;
+    }
+  }
+  
+  /* Ensure the generated designs have the same layout as the loading placeholders */
+  .design-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .generated-design {
+    width: calc(50% - 10px);
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100000000;
+  }
+  
+  .modal-content {
+    background-color: #fefefe20;
+    backdrop-filter: blur(5px);
+    border-radius: 1rem;
+    padding: 20px;
+    border: 1px solid #888;
+    height: 65vh;
+    width: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .close {
+    color: #aaa;
+    position: absolute;
+    top: 0;
+    right:2%;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-image {
+    width: auto;
+    height: 60vh;
+    border-radius: 1rem;
+  }
+  
+  .download-btn {
+    position: absolute;
+    top: 10px;
+    background-color: #88007ae7;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .download-btn:hover {
+    background-color: #ff37eb;
+  }
+  
+  .generated-design {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .generated-design:hover {
+    transform: scale(1.05);
+  }
