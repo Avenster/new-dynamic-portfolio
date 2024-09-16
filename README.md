@@ -58,7 +58,7 @@ These visuals demonstrate the versatility of our platform in handling different 
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/dynamic-portfolio-generator.git
+   git clone https://github.com/Avenster/dynamic-portfolio-generator.git
    cd dynamic-portfolio-generator
    ```
 
