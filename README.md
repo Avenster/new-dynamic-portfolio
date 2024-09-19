@@ -58,8 +58,8 @@ These visuals demonstrate the versatility of our platform in handling different 
 
 1. Clone the repository:
    ```
-   git clone https://github.com/Avenster/dynamic-portfolio-generator.git
-   cd dynamic-portfolio-generator
+   git clone https://github.com/Avenster/new-dynamic-portfolior.git
+   cd new-dynamic-portfolio
    ```
 
 2. Install dependencies:
