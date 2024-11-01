@@ -1,7 +1,6 @@
 # Dynamic Portfolio Generator for Artists
 
 ## Overview
-
 The Dynamic Portfolio Generator is an innovative web application designed to help artists create digital portfolios based on their unique style and preferred themes. This project combines the power of AI-generated art with user preferences to produce personalized digital art portfolios.
 
 **Live Demo:** [http://51.20.55.249:3000/](http://51.20.55.249:3000/)
